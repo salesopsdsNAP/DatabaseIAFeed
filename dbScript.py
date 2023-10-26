@@ -9,6 +9,7 @@ import glob
 import sqlalchemy as sa
 from sqlalchemy import create_engine
 
+#Connection to Database
 print("Connecting Database")
 connection_string = (
     'Driver=ODBC Driver 17 for SQL Server;'
@@ -23,7 +24,7 @@ connection_url = sa.engine.URL.create(
     query=dict(odbc_connect=connection_string)
 )
 engine = sa.create_engine(connection_url, fast_executemany=True)
-print("Connection Successfull!")
+print("Connection to DataBase Successfull!!")
 
 
 
